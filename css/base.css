@@ -1,8 +1,9 @@
-﻿/*============================================================
+/*============================================================
 
                            ~ neos ~
 
             a site skin for the Archive of Our Own
+                        by ZerafinaCSS
 
 ============================================================*/
 
@@ -22,14 +23,27 @@
 
 
 /*============================================================
-CREDITS
+
+==============================================================
+LINKS & CREDITS
 ==============================================================
 
-Base:             "Archive 2.0 skin" by AO3           https://ao3.org/skins/873
+CODE & INSTRUCTIONS:
 
-Inspired by:      "Tide" by ElectricAlice             https://github.com/electricalice/Ao3-tide
-                  "Flat Squares Skin" by milkfatzero  https://ao3-skins.dreamwidth.org/6156.html
+- Code (GitHub):       https://github.com/ZerafinaCSS/neos
+- Instructions (AO3):  https://archiveofourown.org/works/65849527
 
+CREDITS:
+
+- Base:                "Archive 2.0 skin" by AO3           https://archiveofourown.org/skins/873
+- Inspired by:         "Tide" by ElectricAlice             https://github.com/electricalice/Ao3-tide
+                       "Flat Squares Skin" by milkfatzero  https://ao3-skins.dreamwidth.org/6156.html
+
+FIND ME ON:
+
+- GitHub:              https://github.com/ZerafinaCSS
+- AO3:                 https://archiveofourown.org/users/Zerafina/pseuds/ZerafinaCSS
+- Tumblr:              https://www.tumblr.com/zerafinacss
 
 ==============================================================
 DIRECTORY
@@ -64,7 +78,7 @@ Alphanumeric = Additions by ZerafinaCSS
 >> Z2 STATS ICONS WITH HOVER TEXT
 >> Z3 MISCELLANEOUS
 
-=============================================================
+/*============================================================
 >> A1 BASIC LAYOUT SETTINGS ETC.
 ============================================================*/
 
@@ -281,8 +295,10 @@ col.name {
 
 /* define variable for header height */
 #header {
-  --header-height: 38px;
+--header-height: 40px;
 }
+
+
 
 /* this is the header */
 #header,
@@ -313,7 +329,7 @@ col.name {
   display: flex;
     align-items: center;
   box-sizing: border-box;
-  min-height: var(--header-height); 
+min-height: var(--header-height); 
 }
 
 /* remove space before header title */
@@ -338,7 +354,7 @@ col.name {
 /* new AO3 title/heading */
 #header .heading a::before {
   font-weight: 700; /* make title bold */
-  font-size: 1.15em;
+  font-size: 1.2em;
   color: var(--txt-header); /* title/heading color */
   content: "AO3";
 }
@@ -491,7 +507,7 @@ col.name {
 #header #greeting > ul > li > a {
   display: inline-block;
   height: var(--header-height);
-  padding-block: 10px; /* change icon size here */
+padding-block: 10px; /* change icon size here */
   background: transparent;
   filter: var(--header-icon);
 }
@@ -692,7 +708,7 @@ col.name {
 }
 
 #main.dashboard {
-  width: 82%; /* dashboard is 18% wide, so #main with dashboard should take up the remaining space */
+  width: 82%; /* dashboard is 18% wide so #main with dahsboard should take up the remaining space */
 }
 
 /* hide the error message pictures */
@@ -838,7 +854,7 @@ fieldset > fieldset > dl > dt > label {
   font-weight: 700;
 }
 
-fieldset > ul > li:has(label input[type=radio]) {
+fieldset > ul > li:has(label input[type="radio"]) {
   margin: 0 !important;
 }
 
@@ -859,8 +875,8 @@ textarea {
 }
 
 /* when element is selected to receive input */
-input[type=text]:focus,
-.search input[type=text]:focus,
+input[type="text"]:focus,
+.search input[type="text"]:focus,
 input#user_password:focus,
 select:focus,
 textarea:focus {
@@ -917,6 +933,7 @@ option:checked:is(:hover, :focus, :active) {
   color: var(--int-current-txt);
 }
 
+
 form dt {
   display: inline-block;
   box-sizing: border-box;
@@ -944,12 +961,13 @@ form fieldset#parent-options dd:has(ul) {
 }
 
 form dd p {
-  padding-inline: 0;
+padding-inline: 0;
 }
+
 
 /* prevent parent skins dropdown from being cut off */
 form.skin.verbose.post fieldset {
-  overflow: visible;
+overflow: visible;
 }
 
 /* legends = little heading boxes on forms */
@@ -1132,6 +1150,8 @@ input::file-selector-button {
   box-shadow: none !important;
 }
 
+
+
 /*>========== WIDGET: CHARACTER COUNTER ==========<*/
 
 p.character_counter {
@@ -1156,7 +1176,7 @@ p.character_counter {
 input.LV_invalid_field:is(:hover, :focus),
 textarea.LV_invalid_field:is(:hover, :focus) {
   border: var(--border-width) solid var(--alert-txt);
-  outline-color: var(--alert-txt);
+outline-color: var(--alert-txt);
 }
 
 .LV_invalid::before {
@@ -1268,7 +1288,7 @@ textarea.LV_invalid_field:is(:hover, :focus) {
 }
 
 /*>========== WIDGET: MODAL DIALOGS ==========<*/
-/* = dialog box/popup window that appears when you click on a help symbol, for example */
+/* = dialog box/popup window that appears when you click on a help symbol for example */
 
 #modal {
   border: var(--border-width) solid var(--border3);
@@ -1338,6 +1358,12 @@ form.single input[type=submit] {
 .secondary .toggled form,
 .secondary form {
   overflow: visible;
+}
+
+.toggled form p.footnote,
+.dynamic form p.footnote {
+  margin-bottom: 0.643em;
+  line-height: 1;
 }
 
 /*>========== INTERACTION: POST (work, chapter, comment, news, feedback, challenge etc) ==========<*/
@@ -1568,6 +1594,8 @@ ul.view.actions::before {
   content: "View by:";
 }
 
+
+
 /*============================================================
 >> 09 ROLES AND STATES
 ============================================================*/
@@ -1712,7 +1740,7 @@ span.offered.requested {
     flex-wrap: wrap;
     align-items: center;
     column-gap: 5px; /* width of gap between neighbouring tags */
-  width: 100%;
+    width: 100%;
 }
 
 /* fix tag pages */
@@ -1730,7 +1758,7 @@ a.tag:not(.fandom.index.group a.tag, h2.heading a.tag, .splash .favorite a.tag),
   margin-block: 2.5px; /* gap between tag rows; needs to be done with margin because row-gap is not allowed on AO3 (as of August 2025) */
   padding: 0.15em 0.4em;
   border: var(--border-width) solid var(--tag-border);
-  border-radius: 0 var(--radius-tag) var(--radius-tag) var(--radius-tag);
+  border-radius: 0 var(--radius-tag) var(--radius-tag);
   background: var(--tag-default-bg);
   background-origin: border-box !important; /* border-box because if I add a background image (gradient) it should start from the corner of the border, NOT the corner of the padding edge */
   font-size: 0.9em;
@@ -1771,7 +1799,7 @@ dd.fandom.tags a {
 /* warning tags */
 [class^="warning"] a.tag {
   background: var(--tag-warning-bg) !important;
-  font-weight: 400;
+  font-weight: 650;
   color: var(--tag-warning-txt) !important;
 }
 
@@ -1781,11 +1809,53 @@ dd.fandom.tags a {
   color: var(--tag-ship-txt) !important;
 }
 
-/* relationship tags with "&" separator => non-sexual, non-romantic  */
+/* relationship tags with "&" separator => non-sexual, non-romantic */
 [class^="relationship"] a.tag[href*="%20*a*%20"] {
-  background: var(--tag-platonic-bg) !important;
-  color: var(--tag-platonic-txt) !important;
+background: var(--tag-platonic-bg) !important;
+color: var(--tag-platonic-txt) !important;
 }
+
+/* rating and category tags*/
+[class^="rating"] a.tag[href*="General%20Audiences"] {
+  background: var(--tag-gen-bg) !important;
+}
+
+[class^="rating"] a.tag[href*="Teen%20And%20Up%20Audiences"] {
+  background: var(--tag-teen-bg) !important;
+}
+
+[class^="rating"] a.tag[href*="Mature"] {
+  background: var(--tag-mature-bg) !important;
+}
+
+[class^="rating"] a.tag[href*="Explicit"] {
+  background: var(--tag-explicit-bg) !important;
+}
+
+[class^="category"] a.tag[href*="Gen"] {
+  background: var(--tag-gen-bg) !important;
+}
+
+[class^="category"] a.tag[href*="M*s*M"] {
+  background: var(--tag-slash-bg) !important;
+}
+
+[class^="category"] a.tag[href*="F*s*F"] {
+  background: var(--tag-femslash-bg) !important;
+}
+
+[class^="category"] a.tag[href*="Other"] {
+  background: var(--tag-other-bg) !important;
+}
+
+[class^="category"] a.tag[href*="Multi"] {
+  background: var(--tag-multi-bg) !important;
+}
+
+[class^="category"] a.tag[href*="F*s*M"] {
+  background: var(--tag-het-bg) !important;
+}
+
 
 /* character tags */
 [class^="character"] a.tag {
@@ -2142,6 +2212,8 @@ dl.meta dd ul {
   display: inline;
 }
 
+
+
 /*============================================================
 >> 13 GROUP: BLURB
 ============================================================*/
@@ -2149,14 +2221,15 @@ dl.meta dd ul {
 
 /* define variable for blurb padding */
 .blurb {
-  --blurb-padding: 0.75em;
-  --blurb-padding-neg: -0.75em; /* = negative blurb-padding */
+--blurb-padding: 0.75em;
+--blurb-padding-neg: -0.75em; /* = negative blurb-padding */
 }
+
 
 li.blurb,
 .blurb .blurb,
 .region.own + .dashboard li.blurb.own {
-  padding: var(--blurb-padding) var(--blurb-padding) 0.643em;
+padding: var(--blurb-padding) var(--blurb-padding) 0.643em;
   background-color: var(--bg5);
   overflow-wrap: anywhere;
   word-break: normal;
@@ -2187,6 +2260,11 @@ li.picture.blurb,
   top: 0; /* leave this here for bookmarks */
   padding: 0; /* leave this here for own mystery blurbs */
 }
+
+/*>========== new blurb header layout starts here ==========<*/
+
+/* [REDACTED] by maira bc i prefer the og layout */
+
 
 /*>========== modification: PICTURE ==========<*/
 /* for indices with icon pictures, e.g. collections, users, skins + mystery blurbs */
@@ -2242,8 +2320,10 @@ li.picture.blurb,
 }
 
 .bookmark .blurb h4.heading {
-  padding-right: 1ch;
+  padding-right: 0ch;
 }
+
+
 
 /* bookmark icon placement for blurbs */
 .bookmark p.status {
@@ -2280,6 +2360,7 @@ li.picture.blurb,
 .bookmark .count a:is(:hover, :focus) {
   color: var(--link-hgl); /* this is technically not necessary because the symbol is hidden anyway */
 }
+
 
 /* move date next to bookmark icon */
 .bookmark p.status:has(span.text) + .header .datetime {
@@ -2372,6 +2453,7 @@ li.picture.blurb,
 .prompt .blurb ul.optional {
   display: inline-flex;
 }
+
 
 /*============================================================
 >> 14 GROUP: PREFACE (= work prefaces)
@@ -2505,6 +2587,8 @@ li.comment:not(:has(.edit_comment)) {
 .comment div[id^="delete_comment"] ul.actions {
   margin-left: auto;
 }
+
+
 
 /* reply form */
 .comment div:has(.post.comment) {
@@ -2705,6 +2789,8 @@ li.comment:has(.edit_comment) {
   white-space: pre;
 }
 
+
+
 /*============================================================
 >> 18 ZONE: SEARCH/BROWSE
 ============================================================*/
@@ -2726,7 +2812,7 @@ li.comment:has(.edit_comment) {
 
 /*>========== INTERACTION: SEARCH ==========<*/
 
-form.search input[type=text] {
+ form.search input[type=text] {
   border: var(--border-width) solid var(--border2);
   border-radius: var(--radius-small);
   background-color: var(--int-bg);
@@ -2823,6 +2909,7 @@ form.filters dl dl {
   font-weight: 700;
 }
 
+
 /* hide empty filter categories */
 /* for example, if there are no relationships, the relationship filter option will not appear */
 .filters dt.tags:not(:has(+ dd input)).filter-toggle {
@@ -2834,6 +2921,8 @@ form.filters dl dl {
 .filters dt#toggle_exclude_tag_tags:not(:has(+ dd input)).filter-toggle ~ .bookmarker.autocomplete.search {
   display: none;
 }
+
+
 
 /* filters expander */
 .filters .expander,
@@ -3024,7 +3113,7 @@ dl.nomination {
 
 /* work margins and text */
 #workskin {
-  max-width: 65%; /* slightly more narrow than default */
+  max-width: 65%; 
   margin: 0 auto;
   padding: 0 2%;
   font-size: var(--txt-size-work); /* font size of works */
@@ -3037,6 +3126,7 @@ dl.nomination {
 
 .footnote {
   font-size: 0.9em;
+  text-align: right;
 }
 
 /* formatting for all messages */
@@ -3062,8 +3152,9 @@ form ul.notes {
 }
 
 .notice p {
-  margin: 0;
+margin: 0;
 }
+
 
 ul.notes,
 form ul.notes,
@@ -3775,7 +3866,7 @@ div:has(> p.kudos)::before {
   background: url("https://zerafinacss.github.io/ao3/icons/kudos-03.png"); /* url of new icon */
   background-size: cover;
   content: "";
-  filter: var(--kudos-icon);
+  filter: var(--kudos-icon); /* adjust filter values to change color */
 }
 
 /*>========== LOCK ICON for restricted works ==========<*/
@@ -3791,6 +3882,7 @@ img[src$="/images/lockred.png"] {
   content: url("https://zerafinacss.github.io/ao3/icons/lock-01.png"); /* url of new icon */
   filter: brightness(0) saturate(100%) invert(14%) sepia(41%) saturate(7481%) hue-rotate(340deg) brightness(85%) contrast(111%); /* adjust filter values to change color */
 }
+
 
 /*============================================================
 >> Z2 STATS ICONS WITH HOVER TEXT
@@ -3828,7 +3920,7 @@ dl.stats {
 
 /* indent for stats icons in meta box on statistics page */
 dl.meta.statistics dd {
-  padding-left: var(--stats-indent);
+padding-left: var(--stats-indent);
 }
 
 /* position of icon in relation to corresponding value */
@@ -4183,7 +4275,7 @@ dl.stats dd {
   filter: var(--stat-chart);
 }
 
-/* remove white chart background */
+/* remove white chart background*/
 svg > rect {
   display: none;
 }
