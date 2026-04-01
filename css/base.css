@@ -1730,7 +1730,7 @@ a.tag:not(.fandom.index.group a.tag, h2.heading a.tag, .splash .favorite a.tag),
   margin-block: 2.5px; /* gap between tag rows; needs to be done with margin because row-gap is not allowed on AO3 (as of August 2025) */
   padding: 0.15em 0.4em;
   border: var(--border-width) solid var(--tag-border);
-  border-radius: var(--radius-tag);
+  border-radius: 0 var(--radius-tag) var(--radius-tag) var(--radius-tag);
   background: var(--tag-default-bg);
   background-origin: border-box !important; /* border-box because if I add a background image (gradient) it should start from the corner of the border, NOT the corner of the padding edge */
   font-size: 0.9em;
@@ -2188,73 +2188,6 @@ li.picture.blurb,
   padding: 0; /* leave this here for own mystery blurbs */
 }
 
-/*>========== new blurb header layout starts here ==========<*/
-
-.blurb .header:has(ul.required-tags) {
-  display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  margin: 0;
-}
-
-/* remove space for icons on right side */
-.blurb .header .heading {
-  margin: 0;
-}
-
-/* work title and author etc */
-.blurb .header h4.heading {
-  order: 1;
-  flex: 1;
-  box-sizing: border-box;
-  padding-right: 11ch;
-  font-size: 1em;
-  text-align: left;
-}
-
-/* fandoms tags are also part of header but I'm moving them down */
-.blurb h5.fandoms.heading {
-  order: 4;
-  margin-top: 0.5em;
-}
-
-/* hide blank space on promts with no fandom */
-.blurb h5.fandoms.heading:not(:has(a.tag)) {
-  height: 0;
-}
-
-/* change position of content icons */
-.blurb .header ul.required-tags {
-  order: 3;
-  display: flex;
-    flex-wrap: wrap;
-    column-gap: 4px;
-  position: unset;
-  width: 100%;
-  margin-top: 0.429em;
-  padding-top: 0.643em;
-  border-top: var(--border-width) solid var(--border2); /* add border between icons and heading */
-}
-
-/* this is also needed to change position of content icons */
-.blurb ul.required-tags,
-.blurb ul.required-tags li,
-.blurb ul.required-tags li+li+li,
-.blurb ul.required-tags li+li+li+li,
-.blurb ul.required-tags li a {
-  position: unset;
-  width: unset;
-  height: unset;
-  margin: 0;
-  padding: 0;
-}
-
-.blurb .header p.notice {
-  order: 6;
-  width: 100%;
-  margin: 0.5em 0 0 0;
-}
-
 /*>========== modification: PICTURE ==========<*/
 /* for indices with icon pictures, e.g. collections, users, skins + mystery blurbs */
 
@@ -2309,7 +2242,7 @@ li.picture.blurb,
 }
 
 .bookmark .blurb h4.heading {
-  padding-right: 14ch;
+  padding-right: 1ch;
 }
 
 /* bookmark icon placement for blurbs */
