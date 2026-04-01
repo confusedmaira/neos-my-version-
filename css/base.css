@@ -1815,48 +1815,6 @@ background: var(--tag-platonic-bg) !important;
 color: var(--tag-platonic-txt) !important;
 }
 
-/* rating and category tags*/
-[class^="rating"] a.tag[href*="General%20Audiences"] {
-  background: var(--tag-gen-bg) !important;
-}
-
-[class^="rating"] a.tag[href*="Teen%20And%20Up%20Audiences"] {
-  background: var(--tag-teen-bg) !important;
-}
-
-[class^="rating"] a.tag[href*="Mature"] {
-  background: var(--tag-mature-bg) !important;
-}
-
-[class^="rating"] a.tag[href*="Explicit"] {
-  background: var(--tag-explicit-bg) !important;
-}
-
-[class^="category"] a.tag[href*="Gen"] {
-  background: var(--tag-gen-bg) !important;
-}
-
-[class^="category"] a.tag[href*="M*s*M"] {
-  background: var(--tag-slash-bg) !important;
-}
-
-[class^="category"] a.tag[href*="F*s*F"] {
-  background: var(--tag-femslash-bg) !important;
-}
-
-[class^="category"] a.tag[href*="Other"] {
-  background: var(--tag-other-bg) !important;
-}
-
-[class^="category"] a.tag[href*="Multi"] {
-  background: var(--tag-multi-bg) !important;
-}
-
-[class^="category"] a.tag[href*="F*s*M"] {
-  background: var(--tag-het-bg) !important;
-}
-
-
 /* character tags */
 [class^="character"] a.tag {
   background: var(--tag-character-bg) !important;
