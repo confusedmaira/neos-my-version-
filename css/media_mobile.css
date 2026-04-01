@@ -157,6 +157,16 @@ p.navigation.actions {
   align-items: flex-start;
 }
 
+.bookmark .blurb h5.fandoms.heading {
+  padding-right: 10ch;
+}
+
+.bookmark p.status:has(span.text) + .header .datetime {
+  margin-right: 0;
+  margin-top: 27px;
+  font-size: 75%;
+}
+
 /*============================================================
 >> 17 ZONE: HOME
 ============================================================*/
