@@ -22,6 +22,7 @@ Color palettes used for main backgrounds, borders, text and interaction elements
   
 */
 
+
 :root {
 
   color-scheme:          dark;                     /* which system color scheme an (unstyleable) element should render with */
@@ -38,24 +39,24 @@ Color palettes used for main backgrounds, borders, text and interaction elements
   --radius-small:        0.25rem;                  /* smaller elements: list elements, input elements etc. */
   --radius-mid:          0.25rem;                  /* midsizde elements: dropdown menus, system messages etc. */
   --radius-big:          0.35rem;                  /* bigger elements: blurbs, forms, comments, textareas etc. */
-  --radius-btn:          0.25rem;                  /* header search box, buttons */
-  --radius-tag:          0.25rem;                  /* tags */
+  --radius-btn:          0.5rem;                  /* header search box, buttons */
+  --radius-tag:          0.5rem;                  /* tags */
 
   /* icon border-radius */
-  --icon-content-radius: 0.25rem;                  /* content and bookmark icon */
-  --icon-primary-radius: 99999px;                  /* primary and comment icon */
+  --icon-content-radius: 0.15rem;                  /* content and bookmark icon */
+  --icon-primary-radius: 0.15rem;                  /* primary and comment icon */
   --icon-index-radius:   0.25rem;                  /* index icon */
 
 
 /*>========== MAIN BACKGROUND COLORS ==========<*/
 
-  --bg1:                 #262029;                  /* main background, footer etc. */
-  --bg2:                 #302433;                  /* header */
+  --bg1:                 #27212c;                  /* main background, footer etc. */
+  --bg2:                 #2f2532;                  /* header */
   --bg3:                 transparent;              /* dashboard */
-  --bg4:                 #302433;                  /* forms, modal dialogs, javascript context etc. */
+  --bg4:                 var(--bg2);                  /* forms, modal dialogs, javascript context etc. */
   --bg5:                 #262029;                  /* content boxes (blurbs, comments etc.), meta box */
   --bg6:                 #3C293C;                  /* dropdown and secondary menus, tooltips etc. */
-  --bg7:                 #302433;                  /* own blurbs, listbox, some even/odd list items etc. */
+  --bg7:                 var(--bg2);                  /* own blurbs, listbox, some even/odd list items etc. */
   --bg8:                 #872D55;                  /* collection header */
 
 
@@ -63,8 +64,8 @@ Color palettes used for main backgrounds, borders, text and interaction elements
 
   /* colors */
   --border1:             #472E44;                  /* dashboard, footer, news, blockquote, scrollbar track etc. */
-  --border2:             #472E44;                  /* header, tables, forms, input elements, listbox etc. */
-  --border3:             #55354E;                  /* content boxes (blurbs, comments etc.), dropdown and secondary menus */
+  --border2:             var(--border1);                  /* header, tables, forms, input elements, listbox etc. */
+  --border3:             #50254E;                  /* content boxes (blurbs, comments etc.), dropdown and secondary menus */
   --border4:             #7F416E;                  /* meta boxes, tooltips, some heading underlines, scrollbar thumb etc. */
 
   /* width */
@@ -81,21 +82,21 @@ Color palettes used for main backgrounds, borders, text and interaction elements
 /*>========== MAIN TEXT ==========<*/
 
   /* text size */
-  --txt-size-main:       100%;                     /* main text size (bigger than 130% causes some issues, but is still mostly functional) */
-  --txt-size-work:       110%;                     /* work text size */
+  --txt-size-main:       115%;                    /* main text size (bigger than 130% causes some issues, but is still mostly functional) */
+  --txt-size-work:       120%;                     /* work text size */
 
   /* text colors */
-  --txt-header:          #BD8A96;                  /* header text */
-  --txt-header-hgl:      #D44E8D;                  /* selected header dropdown toggle and link items */
+  --txt-header:         var(--txt-main);                  /* header text */
+  --txt-header-hgl:     var(--link-hgl);                  /* selected header dropdown toggle and link items */
   --txt-header-hgl-h1:   linear-gradient(125deg, #D44E8D, #BD8A96 120%); /* gradient for selected AO3 header title */
-  --txt-main:            #BD8A96;                  /* main body text */
-  --txt-alt1:            #BD8A96;                  /* announcements */
+  --txt-main:            #e3ced3;                  /* main body text */
+  --txt-alt1:            var(--txt-main);                  /* announcements */
   --txt-alt2:            #1F1B21;                  /* checkbox checkmark, help symbol, event announcements etc. */
 
   /* links */
-  --link:                #AD396F;                  /* link color */
+  --link:                #D685AB;                  /* link color */
   --link-hgl:            #D44E8D;                  /* color for hovered/focused links */
-  --link-visited:        #7F416E;                  /* color for already visited links + header search bar icon */
+  --link-visited:        #BA79B7;                  /* color for already visited links + header search bar icon */
   --link-underline:      1px solid transparent;    /* link underline => delete "transparent" to make link underlines visible */
 
 
@@ -103,79 +104,81 @@ Color palettes used for main backgrounds, borders, text and interaction elements
 /* = buttons, input and select elements */
 
   /* button colors */
-  --int-btn-bg:          #472E44;                  /* background */
-  --int-btn-border:      #7F416E;                  /* border */
-  --int-btn-txt:         #BD8A96;                  /* text */
+  --int-btn-bg:          var(--border1);                  /* background */
+  --int-btn-border:      var(--border4);                  /* border */
+  --int-btn-txt:         var(--txt-main);                  /* text */
   --int-btn-hgl-bg:      linear-gradient(125deg, #872D55, #D44E8D); /* background for hovered/focused buttons */
   --int-btn-hgl-txt:     #F7CFD2;                  /* text for hovered/focused buttons */                                                                        
   
-  --int-bg:              #1F1B21;                  /* background for input and select elements */
+  --int-bg:              var(--txt-alt2);                  /* background for input and select elements */
 
-  --int-current-bg:      #7F416E;                  /* background for currently active elements */
-  --int-current-txt:     #F7CFD2;                  /* text for currently active elements */
-  --int-disabled-bg:     #472E44;                  /* background for disabled buttons and checkboxes */
+  --int-current-bg:      var(--border4);                  /* background for currently active elements */
+  --int-current-txt:     var(--int-btn-hgl-txt);                  /* text for currently active elements */
+  --int-disabled-bg:     var(--border1);                  /* background for disabled buttons and checkboxes */
   --int-checked:         #AD396F;                  /* checked checkboxes and radio buttons */
   
-  --int-hgl:             #D44E8D;                  /* highlight for hovered/focused/selected elements */
-  --int-hgl-bg:          linear-gradient(125deg, #872D55, #D44E8D); /* background for hovered/focused list items */
-  --int-hgl-txt:         #F7CFD2;                  /* text for hovered/focused list items and for collection header */
+  --int-hgl:             var(--link-hgl);                  /* highlight for hovered/focused/selected elements */
+  --int-hgl-bg:          var(--int-btn-hgl-bg); /* background for hovered/focused list items */
+  --int-hgl-txt:         var(--int-btn-hgl-txt);                  /* text for hovered/focused list items and for collection header */
 
 
 /*>========== ICON COLORS ==========<*/
 /* palette: https://coolors.co/4cb7c3-5e96d6-b268cf-ea5a9a */
 
   /* bookmark and content icons (mostly) */  
-  --icon1:               #5E73C8;                  /* gen, complete, public bookmark */
-  --icon2:               #694CB8;                  /* teen */
-  --icon3:               #694CB8;                  /* m/m, external work */
-  --icon4:               #9B37A4;                  /* mature, chose not to warn, rss feed */
-  --icon5:               #9B37A4;                  /* f/m */
-  --icon6:               #AD396F;                  /* explicit, f/f, warning, incomplete */
-  --icon7:               #9B37A4;                  /* private bookmark */
+  --icon1:               #8bc101;                  /* gen, complete, public bookmark */
+  --icon2:               #f5ce00;                  /* teen */
+  --icon3:               #0054d4;                  /* m/m, external work */
+  --icon4:               #ef851c;                  /* mature, chose not to warn, rss feed */
+  --icon5:               #910679;                  /* f/m */
+  --icon6:               #b0021f;                  /* explicit, f/f, warning, incomplete */
+  --icon7:               #107cb9;                  /* private bookmark */
   --icon8:               #55354E;                  /* hidden bookmark */
-  --icon9:               #AD396F;                  /* rec bookmark */
+  --icon9:               #107cb9;                  /* rec bookmark */
 
   /* gradient overlay for the bookmark and content icons above */
   --icon-grd:       none;
 
   /* other icons */
-  --icon-bg:             #472E44;                  /* background for empty icon box or uploaded icon with transparent background */
+  --icon-bg:             var(--border1);                  /* background for empty icon box or uploaded icon with transparent background */
   --icon-id:             linear-gradient(125deg, #D44E8D, #872D55); /* user, skin, tag, admin */
   --icon-anon:           #55354E;                  /* guest, anonymous user */
   --icon-coll:           linear-gradient(125deg, #D44E8D, #872D55); /* collection, unrevealed work */
 
   /* icon borders */
   --icon-border1:        transparent;              /* border for most icons */
-  --icon-border2:        #472E44;                  /* uploaded, default user and mystery icon + empty symbols box */
+  --icon-border2:        var(--border1);                  /* uploaded, default user and mystery icon + empty symbols box */
 
 
 /*>========== TAG COLORS ==========<*/
 /* palette: https://coolors.co/f3cedf-ebd8f3-dbeaf0 */
 
   /* background */
-  --tag-default-bg:      #A94C8D35;
-  --tag-fandom-bg:       #9B37A4;
-  --tag-warning-bg:      #AD396F;
-  --tag-ship-bg:         #694CB8;
-  --tag-platonic-bg:     #694CB8;
-  --tag-character-bg:    #7F416E;
-  --tag-freeform-bg:     #A94C8D35;
+  --tag-default-bg: #A94C8D35;
+  --tag-fandom-bg: #8f567e35;
+  --tag-warning-bg: #B31F5BB3;
+  --tag-ship-bg: #953C79;
+  --tag-platonic-bg: #744793;
+  --tag-character-bg: #5069BAc5;
+  --tag-freeform-bg: #A94C8D55;
+
+
 
   /* text */
-  --tag-default-txt:     #BD8A96;
-  --tag-fandom-txt:      #F7CFD2;
-  --tag-warning-txt:     #F7CFD2;
-  --tag-ship-txt:        #F7CFD2;
-  --tag-platonic-txt:    #F7CFD2;
-  --tag-character-txt:   #F7CFD2;
-  --tag-freeform-txt:    #BD8A96;
+  --tag-default-txt:     var(--txt-main);
+  --tag-fandom-txt:      var(--int-current-txt);
+  --tag-warning-txt:     var(--int-current-txt);
+  --tag-ship-txt: #f7cff2;
+  --tag-platonic-txt: #f3cff7;
+  --tag-character-txt: #e7d7fa;
+  --tag-freeform-txt:    var(--txt-main);
 
   /* border */
   --tag-border:          transparent;
 
   /* hover and focus */
-  --tag-hgl-bg:          linear-gradient(125deg, #872D55, #D44E8D); /* background */
-  --tag-hgl-txt:         #F7CFD2;                  /* text */
+  --tag-hgl-bg:          var(--int-btn-hgl-bg); /* background */
+  --tag-hgl-txt:         var(--int-hgl-txt);                  /* text */
 
 
 /*>========== COLORS FOR ROLES AND STATES + SYSTEM MESSAGES ==========<*/
