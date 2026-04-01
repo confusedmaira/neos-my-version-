@@ -3024,7 +3024,7 @@ dl.nomination {
 
 /* work margins and text */
 #workskin {
-  max-width: 70em; /* slightly more narrow than default */
+  max-width: 65%; /* slightly more narrow than default */
   margin: 0 auto;
   padding: 0 2%;
   font-size: var(--txt-size-work); /* font size of works */
